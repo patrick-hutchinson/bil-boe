@@ -121,4 +121,7 @@
     width: 200px;
     padding-inline: 12px;
   }
+  .contactContainer {
+    align-self: auto;
+  }
 }
