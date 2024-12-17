@@ -90,7 +90,7 @@
   height: inherit;
   width: fit-content;
   padding-left: 3px;
-  align-self: flex-start;
+  /* align-self: flex-start; */
   margin-top: -3px;
 }
 
@@ -122,6 +122,6 @@
     padding-inline: 12px;
   }
   .contactContainer {
-    align-self: auto;
+    /* align-self: auto; */
   }
 }
