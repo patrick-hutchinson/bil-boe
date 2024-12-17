@@ -95,6 +95,9 @@ a:visited {
   text-transform: uppercase;
   animation: link 4s infinite ease-in-out forwards;
 }
+.link:hover {
+  animation: link 1s infinite ease-in-out forwards;
+}
 
 .hide {
   opacity: 0;
