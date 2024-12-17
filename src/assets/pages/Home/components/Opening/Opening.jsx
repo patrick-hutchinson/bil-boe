@@ -64,7 +64,9 @@ export default function Opening() {
           <div className={styles.lineContainer}>
             <div className={styles.line}></div>
             <span>
-              <a className="link">Visit Our Online Store</a>
+              <a target="_blank" className="link">
+                Visit Our Online Store
+              </a>
             </span>
           </div>
           <span className={styles.logo}>
@@ -74,8 +76,19 @@ export default function Opening() {
 
         <div className={`${styles.contactContainer} hide`}>
           <p>
-            Join our<a className="link"> mailing list</a> for bi-weekly updates, follow on
-            <a className="link"> Instagram</a> or send an<a className="link"> e-mail</a>.
+            Join our
+            <a target="_blank" className="link">
+              mailing list
+            </a>
+            for bi-weekly updates, follow on
+            <a target="_blank" className="link">
+              Instagram
+            </a>
+            or send an
+            <a target="_blank" className="link">
+              e-mail
+            </a>
+            .
           </p>
         </div>
       </div>
