@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+  font-size: var(--font-size-200);
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 60%;
+  min-width: 800px;
+  transition: transform 0.4s ease-in-out;
+
+  min-height: 80px;
+}
+
+.containerFoot {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  max-height: 65px;
+  gap: 5px;
+}
+
+.svgContainer {
+  height: 45px;
+  max-height: 45px;
+}
+.svgContainer svg {
+  height: 100%;
+  object-fit: contain;
+}
+
+.copyrightContainer {
+  height: 90%;
+  writing-mode: vertical-rl;
+  font-size: var(--font-size-100);
+  text-align: center;
+  transform: scale(0.9);
+  overflow-wrap: break-word; /* Prevents overflow */
+}
+.copyrightlogo {
+  position: relative;
+  display: inline-block;
+  transform: rotate(90deg) !important;
+}
+
+.logoContainer {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: inherit;
+  visibility: visible;
+}
+.logo {
+  font-size: var(--font-size-500);
+  font-family: var(--font-family-display);
+}
+.trademark {
+  font-size: var(--font-size-400);
+  position: relative;
+  top: -20px;
+}
+
+.lineContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: clamp(200px, 300px, 350px);
+  padding-inline: 20px;
+  top: 10px;
+  text-transform: uppercase;
+  gap: 1px;
+}
+.line {
+  width: 110%;
+  height: 1px;
+  background: var(--text-color);
+  display: inline-block;
+}
+
+.contactContainer {
+  height: inherit;
+  width: fit-content;
+  padding-left: 3px;
+  align-self: flex-start;
+  margin-top: -3px;
+}
+
+/* Phones in Landscape */
+@media (max-width: 767.98px) and (min-aspect-ratio: 1/1) {
+  .container {
+    min-width: 90vw;
+    background: blue;
+    top: 50dvh;
+    left: 50dvw;
+  }
+  .lineContainer {
+    width: 200px;
+    padding-inline: 12px;
+  }
+}
+
+/* Phones in Portrait */
+@media (max-aspect-ratio: 1/1) {
+  .container {
+    transform-origin: center;
+    top: 50dvh;
+    left: 50dvw;
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.8);
+    min-width: 110dvh;
+  }
+  .lineContainer {
+    width: 200px;
+    padding-inline: 12px;
+  }
+}
