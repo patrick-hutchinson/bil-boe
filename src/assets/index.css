@@ -124,3 +124,10 @@ a:visited {
     --font-size-500: 50px;
   }
 }
+
+@media (max-width: 767.98px) and (max-height: 400px) {
+  :root {
+    --font-size-500: 50px;
+    --font-size-400: 32px;
+  }
+}

@@ -12,7 +12,8 @@
 
   width: 60%;
   min-width: 800px;
-  transition: transform 0.4s ease-in-out, left 0.4s ease-in-out, right 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  will-change: left right;
 
   min-height: 80px;
 }
@@ -65,7 +66,7 @@
 .trademark {
   font-size: var(--font-size-400);
   position: relative;
-  top: -20px;
+  top: -26px;
 }
 
 .lineContainer {
@@ -106,6 +107,11 @@
     width: 200px;
     padding-inline: 12px;
   }
+  .trademark {
+    font-size: var(--font-size-400);
+    position: relative;
+    top: -14px;
+  }
 }
 
 /* Phones in Portrait */
@@ -123,5 +129,10 @@
   }
   .contactContainer {
     /* align-self: auto; */
+  }
+  .trademark {
+    font-size: var(--font-size-400);
+    position: relative;
+    top: -14px;
   }
 }
