@@ -112,7 +112,7 @@ a:visited {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-aspect-ratio: 1/1) {
   :root {
     --font-size-100: 12px;
     --font-size-200: 14px;
