@@ -31,67 +31,79 @@ export default function Opening() {
   };
 
   useGSAP(() => {
-    gsap.to(".hide", {
+    gsap.to(".hide-1", {
       opacity: 1, // target opacity
-      duration: 1, // animation duration
+      duration: 0.4, // animation duration
       delay: 2, // delay before starting the animation
       ease: "power1.out", // easing function
     });
   }, []);
+
+  useGSAP(() => {
+    gsap.to(".hide-2", {
+      opacity: 1, // target opacity
+      duration: 0.4, // animation duration
+      delay: 4, // delay before starting the animation
+      ease: "power1.out", // easing function
+    });
+  }, []);
+
   return (
-    <div className={styles.container} ref={containerRef}>
-      <div className={`${styles.containerHead} hide`}>
-        <p className={styles.info}>
-          Bil–Boe® is a design house, exploring modern industrial interiors and objects through collaborations, proprietary works,
-          and thoughtful inquiries into sustainability, emerging designer empowerment, and the coexistence of heritage and
-          contemporary.
-        </p>
-      </div>
-
-      <div className={styles.containerFoot}>
-        <div className={`${styles.svgContainer} hide`}>
-          <CCSVG />
-        </div>
-
-        <div className={`${styles.copyrightContainer} hide`}>
-          <div className={styles.copyright}>
-            Made with LOVE <span className={styles.copyrightlogo}>©</span> {currentYear}
-          </div>
-        </div>
-
-        <span className={styles.logoContainer} ref={logoContainerRef}>
-          <span className={styles.logo}>Bil</span>
-          <div className={styles.lineContainer}>
-            <div className={styles.line}></div>
-            <span>
-              <a target="_blank" className="link">
-                Visit Our Online Store
-              </a>
-            </span>
-          </div>
-          <span className={styles.logo}>
-            Boe<span className={styles.trademark}>®</span>
-          </span>
-        </span>
-
-        <div className={`${styles.contactContainer} hide`}>
-          <p>
-            Join our
-            <a target="_blank" className="link">
-              mailing list
-            </a>
-            for bi-weekly updates, follow on
-            <a target="_blank" className="link">
-              Instagram
-            </a>
-            or send an
-            <a target="_blank" className="link">
-              e-mail
-            </a>
-            .
+    <main>
+      <div className={styles.container} ref={containerRef}>
+        <div className={`${styles.containerHead} hide-1`}>
+          <p className={styles.info}>
+            Bil–Boe® is a design house, exploring modern industrial interiors and objects through collaborations, proprietary
+            works, and thoughtful inquiries into sustainability, emerging designer empowerment, and the coexistence of heritage
+            and contemporary.
           </p>
         </div>
+
+        <div className={styles.containerFoot}>
+          <div className={`${styles.svgContainer} hide-1`}>
+            <CCSVG />
+          </div>
+
+          <div className={`${styles.copyrightContainer} hide-1`}>
+            <div className={styles.copyright}>
+              Made with LOVE <span className={styles.copyrightlogo}>©</span> {currentYear}
+            </div>
+          </div>
+
+          <span className={styles.logoContainer} ref={logoContainerRef}>
+            <span className={styles.logo}>Bil</span>
+            <div className={styles.lineContainer}>
+              <div className={styles.line}></div>
+              <span className="hide-2">
+                <a href="https://www.bil-boe.shop" target="_blank" className="link">
+                  Visit Our Online Store
+                </a>
+              </span>
+            </div>
+            <span className={styles.logo}>
+              Boe<span className={styles.trademark}>®</span>
+            </span>
+          </span>
+
+          <div className={`${styles.contactContainer} hide-1`}>
+            <p>
+              Join our&nbsp;
+              <a target="_blank" className="link">
+                mailing list
+              </a>
+              &nbsp;for bi-weekly updates, follow on&nbsp;
+              <a href="https://www.instagram.com/bilboe.official" target="_blank" className="link">
+                Instagram
+              </a>
+              &nbsp;or send an&nbsp;
+              <a href="mailto:ollee@bil-boe.com" target="_blank" className="link">
+                e-mail
+              </a>
+              .
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   );
 }

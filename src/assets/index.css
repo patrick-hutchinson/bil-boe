@@ -30,17 +30,18 @@
 }
 
 :root {
-  --font-size-100: 12px;
-  --font-size-200: 14px;
-  --font-size-300: 26px;
+  --font-size-100: 8px;
+  --font-size-200: 12px;
   --font-size-400: 42px;
   --font-size-500: 75px;
 
   --line-height-100: 1.25;
   --line-height-200: 1.25;
-  --line-height-300: 1.25;
   --line-height-400: 1.25;
   --line-height-500: 1.25;
+
+  --letter-spacing-100: 0.16px;
+  --letter-spacing-200: 0.24px;
 
   --font-family-text: Helvetica;
   --font-family-display: KMR-Apparat-Regular;
@@ -92,14 +93,23 @@ a:visited {
 }
 
 .link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.48px;
   text-transform: uppercase;
+
+  white-space: nowrap;
+
   animation: link 4s infinite ease-in-out forwards;
 }
 .link:hover {
   animation: link 1s infinite ease-in-out forwards;
 }
 
-.hide {
+.hide-1,
+.hide-2 {
   opacity: 0;
 }
 
@@ -108,26 +118,23 @@ a:visited {
     opacity: 1;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
 
-@media (max-aspect-ratio: 1/1) {
-  :root {
-    --font-size-100: 12px;
-    --font-size-200: 14px;
-    --font-size-300: 26px;
-    --font-size-400: 42px;
-    --font-size-500: 50px;
+/* Phones in Landscape */
+@media (max-height: 400px) and (min-aspect-ratio: 1/1) {
+  body {
+    overflow: scroll;
   }
 }
 
-@media (max-width: 767.98px) and (max-height: 400px) {
-  :root {
-    --font-size-500: 50px;
-    --font-size-400: 32px;
+/* Phones in Portrait */
+@media (max-width: 767px) and (max-aspect-ratio: 1/1) {
+  body {
+    overflow: scroll;
   }
 }
