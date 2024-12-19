@@ -108,10 +108,10 @@ a:visited {
 
   white-space: nowrap;
 
-  animation: link 4s infinite ease-in-out forwards;
+  animation: link 1.5s infinite ease-in-out forwards;
 }
 .link:hover {
-  animation: link 1s infinite ease-in-out forwards;
+  animation: link 0.75s infinite ease-in-out forwards;
 }
 
 .animationContainer-1 {
