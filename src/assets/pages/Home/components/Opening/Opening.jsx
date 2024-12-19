@@ -38,7 +38,6 @@ export default function Opening() {
       ease: "power1.out", // easing function
     });
   }, []);
-
   useGSAP(() => {
     gsap.to(".hide-2", {
       opacity: 1, // target opacity
@@ -48,6 +47,25 @@ export default function Opening() {
     });
   }, []);
 
+  function createLink(content, url, isLast) {
+    return (
+      <span className="link-container">
+        <a href={url} target="_blank" className="link">
+          <span className="animationContainer">
+            {content.split(" ").map((word, wordIndex) => (
+              <span className="word" key={wordIndex} style={{ marginRight: isLast ? "0px" : "5px" }}>
+                {word.split("").map((letter, letterIndex) => (
+                  <span key={letterIndex} className="letter">
+                    {letter}
+                  </span>
+                ))}
+              </span>
+            ))}
+          </span>
+        </a>
+      </span>
+    );
+  }
   return (
     <main>
       <div className={styles.container} ref={containerRef}>
@@ -66,7 +84,8 @@ export default function Opening() {
 
           <div className={`${styles.copyrightContainer} hide-1`}>
             <div className={styles.copyright}>
-              Made with LOVE <span className={styles.copyrightlogo}>©</span> {currentYear}
+              Made <br />
+              with LOVE <span className={styles.copyrightlogo}>©</span> {currentYear}
             </div>
           </div>
 
@@ -74,11 +93,7 @@ export default function Opening() {
             <span className={styles.logo}>Bil</span>
             <div className={styles.lineContainer}>
               <div className={styles.line}></div>
-              <span className="hide-2">
-                <a href="https://www.bil-boe.shop" target="_blank" className="link">
-                  Visit Our Online Store
-                </a>
-              </span>
+              <span className="hide-2">{createLink("visit our online store", "https://www.bil-boe.shop")}</span>
             </div>
             <span className={styles.logo}>
               Boe<span className={styles.trademark}>®</span>
@@ -88,18 +103,11 @@ export default function Opening() {
           <div className={`${styles.contactContainer} hide-1`}>
             <p>
               Join our&nbsp;
-              <a target="_blank" className="link">
-                mailing list
-              </a>
-              &nbsp;for bi-weekly updates, follow on&nbsp;
-              <a href="https://www.instagram.com/bilboe.official" target="_blank" className="link">
-                Instagram
-              </a>
-              &nbsp;or send an&nbsp;
-              <a href="mailto:ollee@bil-boe.com" target="_blank" className="link">
-                e-mail
-              </a>
-              .
+              {createLink("mailing list", "#")}
+              for bi-weekly updates, follow on&nbsp;
+              {createLink("instagram", "https://www.instagram.com/bilboe.official/")}
+              or send an&nbsp;
+              {createLink("e-mail", "mailto:ollee@bil-boe.com", true)}.
             </p>
           </div>
         </div>

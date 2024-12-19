@@ -33,7 +33,7 @@
   --font-size-100: 8px;
   --font-size-200: 12px;
   --font-size-400: 42px;
-  --font-size-500: 75px;
+  --font-size-500: 70px;
 
   --line-height-100: 1.25;
   --line-height-200: 1.25;
@@ -92,6 +92,12 @@ a:visited {
   cursor: pointer;
 }
 
+.link-container {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  margin-bottom: -4px;
+}
 .link {
   font-style: normal;
   font-weight: 400;
@@ -108,9 +114,24 @@ a:visited {
   animation: link 1s infinite ease-in-out forwards;
 }
 
+.animationContainer-1 {
+  position: absolute;
+}
+
 .hide-1,
 .hide-2 {
   opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  bottom: 0;
+}
+.letter-below {
+  display: inline-block;
+  position: relative;
+  bottom: -13px;
 }
 
 @keyframes link {
