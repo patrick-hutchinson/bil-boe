@@ -103,7 +103,7 @@ export default function Opening() {
           <div className={`${styles.contactContainer} hide-1`}>
             <p>
               Join our&nbsp;
-              {createLink("mailing list", "#")}
+              {createLink("mailing list", "https://www.bil-boe.shop ")}
               for bi-weekly updates, follow on&nbsp;
               {createLink("instagram", "https://www.instagram.com/bilboe.official/")}
               or send an&nbsp;
