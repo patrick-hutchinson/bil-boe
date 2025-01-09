@@ -71,9 +71,8 @@ export default function Opening() {
       <div className={styles.container} ref={containerRef}>
         <div className={`${styles.containerHead} hide-1`}>
           <p className={styles.info}>
-            Bil–Boe® is a design house, exploring modern industrial interiors and objects through collaborations, proprietary
-            works, and thoughtful inquiries into sustainability, emerging designer empowerment, and the coexistence of heritage
-            and contemporary.
+            Bil—Boe® is a design house producing aesthetic objects of utility. We collaborate with independent designers, craft
+            our own products, and explore how a furniture company can operate sustainably and purposefully in today’s world.
           </p>
         </div>
 
